@@ -1,5 +1,12 @@
 import React from "react";
 import { Button } from "./ui/button";
+import Link from "next/link";
+
+const NavLinks = [
+  { name: "Home", slug: "home", path: "/" },
+  { name: "About", slug: "about", path: "/about" },
+  { name: "Contact", slug: "contact", path: "/contact" },
+];
 
 const NavSection = () => {
   return (
@@ -7,9 +14,13 @@ const NavSection = () => {
       <div className="h-16 container mx-auto px-4 flex justify-between items-center">
         <div className=" font-bold text-xl text-primary">Brapurple</div>
         <nav className="hidden md:flex space-x-4 md:space-x-8 lg:space-x-12">
-          <div className="">Home</div>
-          <div className="">About</div>
-          <div className="">Contact</div>
+          {NavLinks.map((item, idx) => {
+            return (
+              <Link key={idx} href={item.path}>
+                {item.name}
+              </Link>
+            );
+          })}
         </nav>
         <Button className="hover:text-purple-400">Get Exclusive</Button>
       </div>
