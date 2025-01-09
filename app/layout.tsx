@@ -1,25 +1,10 @@
 import type { Metadata } from "next";
-import { Roboto, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/Theme-Provider";
 import NavSection from "@/components/NavSection";
 import Footer from "@/components/Footer";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
 
 const poppins = Poppins({
   subsets: ["latin"],
