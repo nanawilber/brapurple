@@ -5,8 +5,8 @@ import React from "react";
 const HeroSection = () => {
   return (
     <div className="container px-4 sm:px-0 py-4 sm:py-8 w-full h-full ">
-      <div className="grid grid-cols-2 items-center">
-        <div className="w-[500px] h-[500px] flex rounded-full  overflow-hidden">
+      <div className="grid md:grid-cols-2 gap-4 md:gap-8 items-center">
+        <div className="w-[calc(100%-50px)] aspect-square mx-auto border-8 border-primary  flex rounded-full  overflow-hidden">
           <Image
             src="/images/002.jpg"
             width="1080"
@@ -14,10 +14,10 @@ const HeroSection = () => {
             className="object-cover"
           />
         </div>
-        <div className="CTA">
+        <div className="CTA py-6 md:py-0">
           <div className="heading flex flex-col text-3xl ">
             <span>
-              Meet <span className="text-primary">Brapurple</span>:
+              Meet <span className="text-primary">Brapurple</span>,
             </span>
             <span>The Dynamic Voice from Takoradi</span>
           </div>
