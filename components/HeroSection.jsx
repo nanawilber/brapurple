@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="grid md:grid-cols-2 gap-4 md:gap-8 items-center">
         <div className="w-[calc(100%-50px)] aspect-square mx-auto border-8 border-primary  flex rounded-full  overflow-hidden">
           <Image
-            src="/images/002.jpg"
+            src="/images/Brapurple.jpg"
             width="1080"
             height="1350"
             className="object-cover"
