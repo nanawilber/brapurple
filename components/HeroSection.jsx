@@ -4,9 +4,12 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="container px-4 sm:px-0 py-4 sm:py-8 w-full h-full ">
+    <section
+      id="home"
+      className="container px-4 sm:px-0 w-full min-h-screen flex flex-col justify-center"
+    >
       <div className="grid md:grid-cols-2 gap-4 md:gap-8 items-center">
-        <div className="w-[calc(100%-50px)] aspect-square mx-auto border-8 border-primary  flex rounded-full  overflow-hidden">
+        <div className="w-[calc(100%-160px)] md:w-[calc(100%-80px)] lg:w-[calc(100%-160px)] aspect-square mx-auto sm:mt-16 border-8 border-primary flex rounded-full  overflow-hidden">
           <Image
             src="/images/Brapurple.jpg"
             width="1080"
@@ -34,7 +37,7 @@ const HeroSection = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,10 +1,13 @@
 import HeroSection from "@/components/HeroSection";
-// import { ThemeToggle } from "@/components/ui/theme-toggle";
+import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
   return (
-    <div className="grid items-center justify-items-center min-h-screen">
+    <div className="flex flex-col w-full min-h-screen items-center justify-center ">
       <HeroSection />
+      <AboutSection />
+      <ContactSection />
     </div>
   );
 }

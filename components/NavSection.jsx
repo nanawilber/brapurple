@@ -8,8 +8,8 @@ import Image from "next/image";
 
 const NavLinks = [
   { name: "Home", slug: "home", path: "/" },
-  { name: "About", slug: "about", path: "/about" },
-  { name: "Contact", slug: "contact", path: "/contact" },
+  { name: "About", slug: "about", path: "#about" },
+  { name: "Contact", slug: "contact", path: "#contact" },
 ];
 
 const NavSection = () => {
@@ -20,7 +20,7 @@ const NavSection = () => {
   };
 
   return (
-    <div className="dark:bg-black/50 backdrop-blur-sm sticky top-0 z-50">
+    <div className="dark:bg-black/50 backdrop-blur-sm w-full sm:fixed top-0 z-50">
       <div className="h-16 container mx-auto px-4 flex justify-between items-center relative">
         <Link
           href="/"
