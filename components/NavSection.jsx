@@ -20,7 +20,7 @@ const NavSection = () => {
   };
 
   return (
-    <div className="dark:bg-black/50 backdrop-blur-sm w-full sm:fixed top-0 z-50">
+    <div className="dark:bg-black/50 backdrop-blur-sm w-full fixed top-0 z-50">
       <div className="h-16 container mx-auto px-4 flex justify-between items-center relative">
         <Link
           href="/"

@@ -5,7 +5,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="container p-4 md:px-8">
       <div className="content sm:mt-16">
-        <h2 className="tracking-widest uppercase font-bold text-2xl sm:mt-16 mb-6">
+        <h2 className="tracking-widest uppercase font-bold text-2xl mt-16 mb-6">
           About <span className="text-primary">me</span>
         </h2>
         {/* <div className="w-full lg:max-w-[50%]">
