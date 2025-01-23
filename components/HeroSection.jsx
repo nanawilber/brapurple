@@ -12,6 +12,7 @@ const HeroSection = () => {
         <div className="w-[calc(100%-160px)] md:w-[calc(100%-80px)] lg:w-[calc(100%-160px)] aspect-square mx-auto mt-16 border-8 border-primary flex rounded-full  overflow-hidden">
           <Image
             src="/images/Brapurple.jpg"
+            alt="Brapurple"
             width="1080"
             height="1350"
             className="object-cover"
@@ -32,7 +33,7 @@ const HeroSection = () => {
               explore his world of sound and storytelling.
             </span>
           </div>
-          <Link href="/about" className="socials text-primary">
+          <Link href="/#about" className="socials text-primary">
             more..
           </Link>
         </div>

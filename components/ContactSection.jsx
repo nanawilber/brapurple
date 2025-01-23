@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="container px-4 md:px-none py-6 my-6">
+    <section id="contact" className="container px-4 md:px-none py-6">
       <h2 className="tracking-widest uppercase font-bold text-2xl mt-16 mb-6">
         Get in <span className="text-primary">touch</span>
       </h2>

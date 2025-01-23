@@ -9,6 +9,7 @@ import Image from "next/image";
 const NavLinks = [
   { name: "Home", slug: "home", path: "/" },
   { name: "About", slug: "about", path: "#about" },
+  { name: "Music", slug: "music", path: "#music" },
   { name: "Contact", slug: "contact", path: "#contact" },
 ];
 
@@ -28,6 +29,7 @@ const NavSection = () => {
         >
           <Image
             src="/images/logo.png"
+            alt="brapurple logo"
             width="41"
             height="40"
             className="object-fit"

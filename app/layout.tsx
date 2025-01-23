@@ -24,19 +24,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
-        <NavSection />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
+          <NavSection />
           {children}
           <div className="fixed bottom-4 right-4 z-50">
             <ThemeToggle />
           </div>
+          <Footer />
         </ThemeProvider>
-        <Footer />
       </body>
     </html>
   );
