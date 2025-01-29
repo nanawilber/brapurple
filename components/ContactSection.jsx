@@ -3,8 +3,38 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
+import axios from "axios";
 
 const ContactSection = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post("/api/contact-us", formData);
+
+      if (res.status === 201) {
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred while sending the message.");
+    }
+  };
+
   return (
     <section id="contact" className="container px-4 md:px-none py-6">
       <h2 className="tracking-widest uppercase font-bold text-2xl mt-16 mb-6">
@@ -39,10 +69,27 @@ const ContactSection = () => {
           </div>
         </div>
         <div className="contact-form w-full">
-          <form className="form grid w-full gap-6">
-            <Input type="text" placeholder="Name" />
-            <Input type="email" placeholder="Email" />
-            <Textarea placeholder="Message" />
+          <form className="form grid w-full gap-6" onSubmit={handleSubmit}>
+            <Input
+              type="text"
+              placeholder="Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <Input
+              type="email"
+              placeholder="Email"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <Textarea
+              placeholder="Message"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
             <Button type="submit">Send Message</Button>
           </form>
         </div>
