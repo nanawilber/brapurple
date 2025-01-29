@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
