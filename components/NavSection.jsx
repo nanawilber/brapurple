@@ -67,7 +67,13 @@ const NavSection = () => {
         <div className="hidden md:flex space-x-4 md:space-x-8 lg:space-x-12">
           {NavLinks.map((item, idx) => {
             return (
-              <Link key={idx} href={item.path} className="hover:scale-105">
+              <Link
+                key={idx}
+                href={item.path}
+                className={`${
+                  item.path === pathname ? "text-primary" : ""
+                } hover:scale-105`}
+              >
                 {item.name}
               </Link>
             );
