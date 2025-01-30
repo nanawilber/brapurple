@@ -32,7 +32,7 @@ const ContactSection = () => {
       }
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error::", error);
       alert("An error occurred while sending the message.");
     } finally {
       setFormData({ name: "", email: "", message: "" });
