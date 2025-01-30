@@ -59,7 +59,7 @@ jobs:
         with:
           node-version: "22"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-          # pnpm-version: ${{ steps.detect-package-manager.outputs.manager == 'pnpm' && '8.x' || '' }}
+          pnpm-version: 9
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:

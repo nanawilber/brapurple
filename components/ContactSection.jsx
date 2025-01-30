@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Input } from "./ui/input";
@@ -25,13 +27,15 @@ const ContactSection = () => {
 
       if (res.status === 201) {
         alert("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
       } else {
         alert("Failed to send message.");
       }
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("Error:", error);
       alert("An error occurred while sending the message.");
+    } finally {
+      setFormData({ name: "", email: "", message: "" });
     }
   };
 
@@ -72,6 +76,7 @@ const ContactSection = () => {
           <form className="form grid w-full gap-6" onSubmit={handleSubmit}>
             <Input
               type="text"
+              name="name"
               placeholder="Name"
               value={formData.name}
               onChange={handleChange}
@@ -79,14 +84,16 @@ const ContactSection = () => {
             />
             <Input
               type="email"
+              name="email"
               placeholder="Email"
-              value={formData.name}
+              value={formData.email}
               onChange={handleChange}
               required
             />
             <Textarea
               placeholder="Message"
-              value={formData.name}
+              name="message"
+              value={formData.message}
               onChange={handleChange}
               required
             />
